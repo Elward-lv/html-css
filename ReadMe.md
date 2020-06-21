@@ -2,4 +2,4 @@
 - 简介
 - 使用环境: webstrom + less + firefox
 - 使用的介绍: 其中包含小米官网css + 手机端页面项目练习 + html5 / CSS3 的新属性
-包括动画,flex，以及less简单的使用
+包括动画,flex，图标字体(font Awesome,和阿里图标字体),以及less简单的使用
