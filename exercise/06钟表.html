@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>钟表</title>
+  <style type="text/css">
+
+    .clock{
+      width: 500px;
+      height: 500px;
+      /*background-color: #999999;*/
+      background-image: url("../animationpic/1024px-Analogue_clock_face.svg.png");
+      background-size: cover;
+      margin: 0 auto;
+      margin-top: 100px;
+
+      border-radius: 50%;
+      border: 10px solid black;
+      position: relative;
+    }
+    .clock> div{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .hour-wrepper{
+      height: 70%;
+      width: 70%;
+      /*background-color: #999999;*/
+      animation: run 7200s linear infinite;
+    }
+
+    .hour{
+      height: 50%;
+      width: 6px;
+      background-color: #000000;
+      margin: 0 auto;
+    }
+
+    .min-wrepper{
+      height: 80%;
+      width: 80%;
+      /*background-color: #999999;*/
+      animation: run 600s steps(60) infinite;
+    }
+
+    .min{
+      height: 50%;
+      width: 4px;
+      background-color: #b9cb41;
+      margin: 0 auto;
+    }
+
+    .sec-wrepper{
+      height: 95%;
+      width: 95%;
+      /*background-color: #999999;*/
+      animation: run 10s steps(60) infinite;
+    }
+
+    .sec{
+      height: 50%;
+      width: 2px;
+      background-color: red;
+      margin: 0 auto;
+
+    }
+
+    @keyframes run {
+      to{
+         transform: rotateZ(360deg);
+      }
+      from{
+        transform: rotateZ(0deg);
+      }
+    }
+
+  </style>
+</head>
+<body>
+<!--可以围绕中心转动-->
+<!--表的容器-->
+<div class="clock">
+<!--创建时针容器-->
+  <div class="hour-wrepper">
+<!--    时针-->
+    <div class="hour"></div>
+  </div>
+
+  <div class="min-wrepper">
+    <!--    分针-->
+    <div class="min"></div>
+  </div>
+
+  <div class="sec-wrepper">
+    <!--    秒针-->
+    <div class="sec"></div>
+  </div>
+</div>
+
+</body>
+</html>

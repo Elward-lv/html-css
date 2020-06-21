@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>高度塌卸</title>
+  <style>
+    .box1{
+      border: red 5px solid;
+      /*
+      在页面中的元素都有一个属性 block formatting context  -bfc 块级格式化环境
+      当开启了BFC特性之后：
+          父元素的外边距不会和子元素重叠
+          开启BFC的元素不会被父元素覆盖
+          可以包含浮动子元素
+        如何开启BFC：（会有一些副作用
+          1设置元素浮动:    可以撑开父元素 但是父元素宽度改变 ，而且下边元素上移  问题变复杂
+          2设置元素的绝对定位
+          3设置元素为inline block :  可以解决问题  导致宽度消失
+          4将元素的overflow设置为非visible的值  完美解决问题
+                 问题：IE6及以下的游览器不支持BFC
+                 IE6  zoom：1
+
+
+
+       */
+      overflow: auto;
+    }
+    .box2{
+      height: 100px;
+      width: 100px;
+      background-color: yellowgreen;
+    }
+    .box3{
+      height: 100px;
+      background-color: darkgray;
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="box2"></div>
+</div>
+
+<div class="box3"></div>
+</body>
+</html>

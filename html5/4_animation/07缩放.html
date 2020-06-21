@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>缩放</title>
+  <style type="text/css">
+    div{
+      float: left;
+    }
+    .box1{
+      width: 100px;
+      height: 100px;
+      background-color: #bfa;
+      transition: 2s ;
+
+      margin-left: 200px;
+    }
+
+    .box1:hover{
+       /*缩放 可选值 元素缩放:
+                  scaleX：
+                  scaleY:
+                  scale:双方向缩放*/
+       transform: scaleX(0.2);
+    }
+
+    .box2{
+      height: 400px;
+      width: 400px;
+      border: 1px red solid;
+      overflow: hidden;
+    }
+    img:hover{
+      transform: scale(1.5);
+    }
+    img{
+      width: 100%;
+      transition: 0.5s;
+      /*变行的开始地方 */
+      transform-origin: 0 0;
+    }
+  </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2">
+  <img src="../../animationpic/1024px-Analogue_clock_face.svg.png" alt="">
+</div>
+</body>
+</html>

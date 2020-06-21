@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>拖动图片</title>
+  <style type="text/css">
+    #div1 {
+      width: 198px;
+      height: 66px;
+      padding: 2px;
+      border: black 1px solid;
+    }
+  </style>
+  <script type="text/javascript">
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+
+    function drag(ev) {
+      ev.dataTransfer.setData("Text", ev.target.id);
+    }
+
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("Text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+  </script>
+</head>
+<body>
+<div id="div1" ondrag="drop(event)" ondragover="allowDrop(event)">
+
+</div>
+<img id="drag1" src="../pic/pointer-active.png" draggable="true"
+     ondragstart="drag(event)">
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>高度塌卸</title>
+  <style type="text/css">
+    /*
+    由于收到box1浮动的影像 导致box2 和box3向上移动
+    我们希望清楚掉其他浮动元素对此元素的 影响
+    clear 可以用来清除其他都浮动元素对此元素的影响
+       选择：none  不清除浮动
+            left：清除左侧浮动元素对当前元素的影响
+            right：...........
+            both：清除两侧影响，清除影响最大的元素
+     */
+      .box1{
+        height: 100px;
+        width: 100px;
+        background-color: #a1a1a1;
+        float: left;
+      }
+      .box2{
+        height: 200px;
+        width: 200px;
+        background-color: yellowgreen;
+        /*
+        清除浮动之后  这个元素回到其他元素没浮动时原来的位置
+        回到元素不浮动时的位置
+         */
+        /*clear: left;*/
+        float: right;
+      }
+      .box3{
+        height: 300px;
+        width: 300px;
+        background-color: skyblue;
+        clear: left;
+      }
+  </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+</body>
+</html>

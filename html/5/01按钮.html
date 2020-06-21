@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>按钮</title>
+  <style type="text/css">
+    .btn:link{
+      display: block;
+      height: 39px;
+      width: 150px;
+      background-image: url("../../pic/button.png");
+      background-repeat: no-repeat;
+      text-decoration: none;
+
+    }
+    .btn:hover{
+      /*
+     伪类给按钮添加不同的状态
+     发现第一次切换图片时  图片有一个非常快的闪烁 影响用户的体验
+     原因： 背景图片是以外部图片的形式加载进网页  游览器每加载一次外部资源就需要发送一个请求
+         外部资源并不会同时加载 只有使用的时候才会加载资源
+         也就是说开始只加载了button.png 在鼠标移入的时候才加载button2.png
+         但是加载图片需要一定的时间 所以有一段时间背景图片无法显示
+
+     解决：可以将三张图片放在一起，及一张图片  使用移动的方法解决----图片整合技术
+     整合一张图片：优点
+                   提高访问效率 提高用户体验
+                   减小了图片的总大小
+      */
+      background-image: url("../../pic/button2.png");
+    }
+    .btn:active{
+      background-image: url("../../pic/button3.png");
+    }
+  </style>
+</head>
+<body>
+<a href="#" class="btn"></a>
+</body>
+</html>

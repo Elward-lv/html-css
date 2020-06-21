@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>京东</title>
+  <link rel="stylesheet" href="../html/css/reset.css">
+  <style type="text/css">
+   .img-list{
+     width: 590px;
+     height: 470px;
+     margin: 100px auto;
+     /*overflow: hidden;*/
+     position: relative;
+   /*  开启定位但是又不会影响其他的元素*/
+   }
+    img{
+      /*设置图片的缩放*/
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+  /*  设置li  可以把所有的图片重叠到一起*/
+    .img-list li{
+      position: absolute;
+    }
+
+  /*  通过修改元素的层级来显示图片*/
+    .img-list li:nth-child(2){
+      z-index: 1;
+    }
+
+  /*  设置导航点*/
+   .pointer{
+     position: absolute;
+     z-index: 9999;
+     bottom: 20px;
+     left: 10px;
+   }
+   .pointer a{
+      /*设置元素左浮动*/
+      float: left;
+      width: 10px;
+      height: 10px;
+      background-color: rgba(255,255,255,.6);
+     margin-left: 4px;
+     border-radius: 50%;
+     /*将背景颜色只设置到内容区 边框和内边距不在有背景颜色*/
+     border: 2px solid transparent;
+     background-clip: content-box;
+    }
+
+    .pointer a:active,
+    .pointer a:hover{
+      background-color: #fff;
+      border: 2px solid rgba(255,255,255,.3);;
+    }
+  </style>
+</head>
+<body>
+<ul class="img-list">
+  <li><a href="javascript:;"><img src="../pic/jingdong/1.webp" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/2.jpg.webp" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/3.jpg.webp" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/4.jpg.webp" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/5.jpg" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/6.jpg" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/7.jpg" ></a></li>
+  <li><a href="javascript:;"><img src="../pic/jingdong/8.jpg" ></a></li>
+  <div class="pointer">
+    <a href="javascript:;" class="active"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+    <a href="javascript:;"></a>
+  </div>
+</ul>
+
+</body>
+</html>

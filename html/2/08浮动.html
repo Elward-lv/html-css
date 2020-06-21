@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>浮动</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    /*
+    块元素在文档流中默认是垂直排列  但是在其他的地方不一定
+    如果希望水平排列 则可以使用float使块元素脱离文档流
+    可选值：
+        none  默认值 默认在文档流排列
+        left  脱离文档流向文档左侧浮动
+        right 脱离文档流  -----
+        当设置位float之后立即脱离文档流  它下面的元素会向上移动,本身会尽量汪左上或者右上浮动  知道遇到父元素的边框或者其他的浮动元素
+        如果浮动元素上边是一个没有浮动的块元素，浮动元素不会超过块元素
+        而且浮动的元素不会超过它上边的兄弟元素
+     */
+    .box1{
+      background-color: green;
+      height: 100px;
+      width: 600px;
+      float: left;
+      /*float: right;*/
+    }
+    .box2{
+      background-color: red;
+      height: 100px;
+      width: 100px;
+      float: left;
+      /*float: right;*/
+    }
+    .box3{
+      background-color: black;
+      height: 100px;
+      width: 600px;
+      float: left;
+    }
+    /*
+    浮动元素不会盖住文字  文字会环照周围
+     */
+    .p2{
+      background-color: aqua;
+      height: 200px;
+    }
+    /*
+    内联元素脱离文档流  也是被内容撑开
+     */
+    .s2{
+      height: 100px;
+      width: 100px;
+      background-color: brown;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<p class="p2">啊啊啊</p>
+<span class="s2">我是一个span</span>
+</body>
+</html>

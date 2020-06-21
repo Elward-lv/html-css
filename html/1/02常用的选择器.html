@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>常用得选择器</title>
+  <style>
+    /*
+    id选择器:#id id必须是唯一得
+    class选择器:.class class可以为多个元素设置样式
+     */
+    #p1{
+      color: seagreen;
+    }
+    .p2{
+      color: seagreen;
+    }
+
+    /*
+    分组选择器:并集，及为每个元素都加上样式，中间使用逗号分隔 #id,.class
+     */
+    #p1,.p2{
+      color: seagreen;
+    }
+    /*
+    要想为交集得选择器添加样式：中间使用空格分隔，及#id.class
+     */
+
+    span.p3{
+      color: brown;
+      font-size: 20px;
+      background-color: seagreen;
+    }
+  </style>
+</head>
+
+<body>
+<p id="p1">hello</p>
+<p class="p2 hello">hello</p>
+<p class="p2">hello</p>
+<p class="p2">hello</p>
+<p class="p3">hello</p>
+<p ><span class="p3">hello</span></p>
+<p>hello</p>
+
+</body>
+</html>

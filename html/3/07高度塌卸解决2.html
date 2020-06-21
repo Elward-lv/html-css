@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>高度塌卸解决2</title>
+  <style type="text/css">
+      .box2{
+        height: 100px;
+        width: 100px;
+        background-color: yellowgreen;
+        float: left;
+      }
+    .box1{
+      border: black 2px solid;
+    }
+
+    .clear{
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="box2"></div>
+  <!--通过添加一个新的div来解决 高度塌卸的问题  此时可以使用clear来清除浮动影响 -->
+  <div class="clear"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>box</title>
+  <style>
+    .box{
+      /*
+       * width 和height 设置的是 内容区的大小  及不会影响边框的宽度
+       * 盒子的大小由内容区和边框一起决定
+       */
+      height: 100px;
+      width: 100px;
+      background-color: green;
+      /*
+       * 要为一个元素设置边框 必须指定三个样式,可以四周一起设置如:上 右 下 左  --顺时针
+       * border-width   border-color  border-style
+       */
+      /*border-width: 5px;*/
+      /*border-color: black;*/
+      /*border-style: solid;*/
+      /*
+       * none
+       * solid 实线
+       * dotted 点状
+       * dashed 虚线
+       * double 双线
+       * border 简写如：10px red solid 没有顺序要求
+       */
+       border: black 10px solid;
+
+      /*
+       * 外边距：盒子于盒子之间的距离,不会影响盒子的大小，会影响盒子的位置
+       * 左上 ：会影响自身的位置
+       * 右下：会影响其他盒子的位置
+      */
+      margin: 20px;
+
+      /*
+       * 内边距会影响盒子的整体大小
+       */
+      padding: 20px;
+    }
+
+    .box2{
+      height: 100%;
+      width: 100%;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+  <div class="box2">这是一段文字</div>
+  <div class="box2"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>选择器的权重</title>
+  <style type="text/css">
+    #redid{
+      color: black;
+    }
+    div{
+      color: yellowgreen;
+    }
+
+    .red{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<!--内联样式> id选择器 > 类和伪类选择器 > 元素选择器
+    比较优先级 需要将所有的优先级相加  越优先越先显示 不能跨越数量级
+    某个样式后添加！importment 可以获得甚至最高优先级-->
+<div id= "redid" class="red">hahahah</div>
+</body>
+</html>

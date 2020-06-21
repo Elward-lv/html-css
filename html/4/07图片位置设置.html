@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>图片位置</title>
+  <style type="text/css">
+    .box1{
+      width: 400px;
+      height: 400px;
+      background-color: black;
+      background-image: url(../../pic/cut.jpg);
+      background-repeat: no-repeat;
+      /*
+      把图片移动到中间或者其他
+      background-position：
+           top  right left bottom  两个值来指定位置
+
+           可以直接指定偏移量:  100px  0px  (水平 + 垂直)
+              水平  ： 正值  右移 ；否则  左移
+              垂直同理
+
+       设置背景是否混动 background-attachment
+            scroll
+            fixed
+       */
+       background-position: 0 100px;
+      margin: 0 auto;
+    }
+    body{
+      background-image: url(../../pic/cut.jpg);
+      background-repeat: no-repeat;
+      background-position: 100px 100px;
+      /*
+      当背景图片的background-attachment为fixed
+      背景图片的定位永远相对于窗口  一般设置body
+       */
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body style="height: 5000px">
+<div class="box1">
+
+</div>
+</body>
+</html>

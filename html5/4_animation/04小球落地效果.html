@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>小球</title>
+  <style type="text/css">
+    .ball{
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+      background-color: yellowgreen;
+      animation: luo 2s infinite alternate linear;
+    }
+
+    .box1{
+      height: 500px;
+      border-bottom: 10px solid black;
+      margin: 10px auto;
+      overflow: hidden;
+    }
+
+  /*  小球的下落动画*/
+    @keyframes luo {
+      /*20%,60%,*/to{
+        margin-top: 400px;
+        /*animation-timing-function: ease-in;*/
+      }
+      /*40%{*/
+      /*  margin-top: 100px;*/
+      /*}*/
+
+      /*80%{*/
+      /*  margin-top: 200px;*/
+      /*}*/
+      from{
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="ball"></div>
+</div>
+</body>
+</html>

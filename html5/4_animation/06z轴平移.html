@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>z</title>
+  <style type="text/css">
+    html{
+      /*设置视距  人眼和屏幕距离 800px(600- 1200)*/
+      perspective: 800px;
+    }
+    body{
+      border: 1px solid red;
+    }
+
+     .box1{
+       width: 100px;
+       height: 100px;
+       background-color: #bfa;
+       margin: 200px auto;
+       /*需要看到效果 需要设计网页的视距*/
+       transition: 2s ;
+     }
+
+    body:hover .box1{
+      transform: translateZ(500px);
+      /*火狐好像没用*/
+      -moz-transform: translateZ(500px);
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+
+</div>
+</body>
+</html>

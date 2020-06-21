@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表格</title>
+  <style type="text/css">
+    table{
+      width: 50%;
+      border: 1px solid black;
+      /*border-spacing: 0px;*/
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    td{
+      border: 1px solid black;
+      height: 100px;
+    /*  默认垂直居中 可以通过vertical-align修改  指挥影响文字*/
+      vertical-align: top;
+      text-align: center;
+
+    }
+
+    table tr:nth-child(odd){
+      background-color: yellowgreen;
+    }
+
+    .box1{
+      height: 300px;
+      width: 300px;
+      background-color: red;
+      /*将元素设置为单元格！ td*/
+      display: table-cell;
+      /*text-align: center;文字的水平居中*/
+      /*此时可以使用table的vertical-align来垂直居中*/
+      vertical-align: middle;
+    }
+    .box2{
+      height: 100px;
+      width: 100px;
+      background-color: #999999;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="box2"></div>
+</div>
+<table>
+  <tr>
+    <td>姓名</td>
+    <td>年龄</td>
+    <td>性别</td>
+  </tr>
+  <tr>
+    <td>我</td>
+    <td>46</td>
+    <td>男</td>
+  </tr>
+  <tr>
+    <td>他</td>
+    <td>15</td>
+    <td>女</td>
+  </tr>
+  <tr>
+    <td>他</td>
+    <td>15</td>
+    <td>女</td>
+  </tr>
+  <tr>
+    <td>他</td>
+    <td>15</td>
+    <td>女</td>
+  </tr>
+  <tr>
+    <td>他</td>
+    <td>15</td>
+    <td>女</td>
+  </tr>
+</table>
+</body>
+</html>

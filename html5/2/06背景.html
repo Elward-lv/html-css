@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>背景</title>
+  <style type="text/css">
+    .im{
+      height: 400px;
+      width: 400px;
+      background-color: #999999;
+      background-image: url("../../pic/banner01.png");
+      background-repeat: no-repeat;
+      background-position: 0px  0px;
+      /*可以看出包含背景*/
+      /*border: red double 10px;*/
+      padding: 10px;
+    /*  设置背景范围*/
+    /*  background-clip: content-box;*/
+      /*背景计算的原点
+          默认padding-box: background-position 从内边距开始计算
+          content-box 背景图片的远点从内容区左上角开始计算
+          border-box */
+      /*background-origin: content-box;*/
+    /*  背景图片的尺寸  第一个表示宽度 第二个白哦是高度  只写一个另外一个自动设置缩放
+           cover充满元素
+           contain 完整显示图片*/
+
+      background-size: contain ;
+    /*  background-attachment设置图片的滚动*/
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="im">
+</div>
+</body>
+</html>

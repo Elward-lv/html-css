@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>z</title>
+  <style type="text/css">
+    body{
+      /*设置视距  人眼和屏幕距离 800px(600- 1200) 可以有透视效果 比如近大远小
+        火狐设置html标签没有用 设置body可以*/
+      border: 1px solid red;
+      perspective: 800px;
+    }
+
+    .box1{
+      width: 320px;
+      height: 320px;
+      background-color: #bfa;
+      margin: 200px auto;
+      /*需要看到效果 需要设计网页的视距*/
+      transition: all 2s;
+    }
+
+    img{
+      width: 320px;
+    }
+
+    /*旋转的可选值：
+            totateX
+            totateY
+            totateZ deg度数 turn圈数*/
+    body:hover .box1{
+      /*transform: translateZ(200px) rotateX(90deg) ;*/
+        transform: rotateX(45deg);
+      /*是否显示背面*/
+      /*backface-visibility: hidden;*/
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <img src="../../pic/Sarlia2.jpg" alt="">
+</div>
+</body>
+</html>

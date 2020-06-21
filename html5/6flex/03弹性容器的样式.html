@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>弹性盒</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      width: 600px;
+      height: 800px;
+      border: 10px red solid;
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+    /*  justify 表示主轴
+        align   表示辅轴 */
+      /*align-items：辅轴如何对齐
+                   stretch:默认值 所有元素长度一样  行之间元素的高度相同
+                   flex-start:元素不会拉伸，沿着辅轴起边对齐
+                   flex-end:沿着辅轴终点对齐
+                   center  居中对其
+                   baseline:基线对齐  可能看字的大小
+                   */
+      align-items: flex-start;
+      /*justify-content: center;*/
+      /*align-content 对齐元素之间的的空白
+                      center:使上下的空白相等 所有元素位于中间
+                      flex-start:靠上对齐  空白在下方
+                      其他属性和justify-content相似*/
+      align-content: flex-start;
+
+    }
+    li{
+      width: 200px;
+      /*height: 100px;*/
+      background-color: #bfa;
+      font-size: 50px;
+      line-height: 100px;
+      text-align: center;
+      /*flex-shrink: 0;*/
+
+    }
+    li:nth-child(1){
+      /*flex-grow: 0;*/
+      /*align-self: ;用来覆盖当前元素的align-item
+                     stretch 拉开*/
+      align-self: stretch;
+    }
+    li:nth-child(2){
+      background-color: rebeccapurple;
+      /*flex-grow: 2;*/
+    }
+    li:nth-child(3){
+      background-color: #b9cb41;
+      /*flex-grow: 3;*/
+    }
+
+    li:nth-child(4){
+      background-color: red;
+      /*flex-grow: 2;*/
+    }
+    li:nth-child(5){
+      background-color: blue;
+      /*flex-grow: 3;*/
+    }
+
+  </style>
+</head>
+<body>
+
+<ul>
+  <li>1</li>
+  <li>
+    2
+    <div>2</div>
+  </li>
+  <li>
+    3
+    <div>3</div>
+    <div>3</div>
+  </li>
+  <li>1</li>
+  <li>
+    2
+    <div>2</div>
+  </li>
+</ul>
+aa
+</body>
+</html>

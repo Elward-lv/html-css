@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>变行</title>
+  <style type="text/css">
+    body{
+      background-color: whitesmoke;
+    }
+    .box{
+      height: 100px;
+      width: 100px;
+      background-color: #666666;
+      margin: 0px auto;
+      margin-top: 200px;
+
+    /*  变行指通过css改变元素的形状或者位置
+          不会影响页面布局,不会脱离文档流
+          平移:百分比相对于自身计算
+              - translateX
+              - translateY
+              - translateZ */
+       transform: translateY(50px);
+    }
+
+    .box2 {
+      height: 100px;
+      width: 100px;
+      background-color: #b9cb41;
+      margin: 0px auto;
+    }
+
+    .box3{
+      /*height: 200px;*/
+      /*width: 200px;*/
+      background-color: #999999;
+      position: absolute;
+      /*居中方式一 适用于height和width确定的情况*/
+
+      /*top: 0;*/
+      /*bottom: 0;*/
+      /*left: 0;*/
+      /*right: 0;*/
+      /*margin: auto;*/
+      /*居中方式二 长宽不确定 水平和垂直居中*/
+      left: 50%;
+      transform: translateX(-50%)  translateY(-50%);
+    }
+
+    .box4,.box5{
+      width: 220px;
+      height: 300px;
+      background-color: white;
+      float: left;
+      margin:  0 10px;
+      transition: all 0.5s ;
+    }
+    .box4:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+    }
+  </style>
+</head>
+<body>
+<div class="box">
+</div>
+<div class="box2">
+</div>
+<div class="box3">
+  aaa
+</div>
+
+<div class="box4"></div>
+<div class="box5"></div>
+</body>
+</html>

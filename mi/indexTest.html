@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>测试</title>
+  <style type="text/css">
+    .nav{
+      height: 40px;
+      width: 100%;
+      background-color: #666666;
+
+    }
+
+    li{
+      float: left;
+      list-style: none;
+      line-height: 40px;
+      /*border: 1px solid black;*/
+      width: 100px;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    a{
+      display: block;
+      font-size: 16px;
+      text-decoration: none;
+      color: black;
+    }
+
+    /*设置下拉的二维码*/
+    .app{
+      position: relative;
+    }
+    .app:hover{
+      color: #999999;
+    }
+    .l:hover .app::after{
+      content: '';
+      width: 0px;
+      height: 0px;
+      display: block;
+      border: 10px solid transparent;
+      border-top: none;
+      border-bottom-color: #ffffff;
+
+      position: absolute;
+      bottom: 0px;
+      left: 40px;
+    }
+    .l:hover .qrcode{
+      display: block;
+    }
+
+    .qrcode{
+      /*设置隐藏的办法  可以是不显示 或者高度设置为0，hover的时候再设置高度，此时需要overflow*/
+      /*1.display: none;*/
+      /*2.*/
+      height: 0px;
+      position: absolute;
+      left: -10px;
+      width: 124px;
+      height: 148px;
+      /*padding-top: 10px;*/
+
+      box-shadow: 0 0 10px rgba(0,0,0,.3);
+
+    }
+
+    .qrcode img{
+      display: block;
+      margin: 17px;
+      margin-bottom: 0px;
+      width: 90px;
+    }
+    .qrcode span{
+      line-height: 1;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li class="l">
+      <a href="#" class="app">
+        dowload
+        <div class="qrcode">
+          <img src="img/dowload.png">
+          <span>点击下载</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="#"><span>up</span></a>
+    </li>
+    <li>
+      <a href="#"><span>down</span></a>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

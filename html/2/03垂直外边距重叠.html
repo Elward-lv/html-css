@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>垂直外边距重叠</title>
+  <style>
+    .box1{
+      background-color: green;
+      height: 100px;
+      width: 100px;
+      border: black 10px solid;
+      padding: 10px;
+
+      margin-bottom: 50px;
+    }
+
+    /*
+    * 在网页相邻的垂直外边距会发生重叠
+    * 重叠指页边距取最大值 而不是取和
+    * 如果父子元素的垂直外边距相邻了，则子元素的外边距会设置给父元素
+     */
+    .box2{
+      background-color: green;
+      height: 100px;
+      width: 100px;
+      border: black 10px solid;
+      padding: 10px;
+
+      margin-top: 50px;
+    }
+
+    .box3{
+      background-color: green;
+      height: 100px;
+      width: 200px;
+      /*
+      * 一.方法
+      *设置外边框防止和box4重叠  可行
+      */
+      /*border: black 1px solid;*/
+      /*
+      * 设置内边框也可以和box4隔开 可行
+      */
+      /*padding-top: 1px;*/
+
+      /*
+      * 方法二.通过padding来把box4挤下去,此时需要考虑盒子的大小
+      */
+      padding-top: 100px;
+    }
+    /*
+     *出现相邻，如果外边div没有border
+     */
+    .box4{
+      background-color: black;
+      height: 100px;
+      width: 100px;
+      /*margin-top: 50px;*/
+    }
+  </style>
+</head>
+<body>
+<div class="box3">
+  <div class="box4"></div>
+  <!--方法三 可以使用空的table来使两个元素隔开 达到区分边框的问题 或者使用css来添加一个表格   display =table -->
+</div>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

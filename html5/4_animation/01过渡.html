@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>过渡</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+      .box1{
+        width: 800px;
+        height: 400px;
+        background-color: silver;
+        overflow: hidden;
+      }
+
+      .box1:hover div{
+        /* width: 200px;*/
+        /*height: 200px;*/
+        margin-left: 600px;
+      }
+
+
+    .box1 div{
+      width: 100px;
+      height: 100px;
+    }
+
+    .box2{
+      background-color: #bfa;
+      margin-top: 10px;
+      /*transition: all 2s;*/
+    /*  transition 过渡效果：
+           可以指定某个属性变化时的切换方式*/
+      /*transition-property: ; 指定执行过渡的属性 可以是width,多个属性使用,隔开 或者使用all;很多属性都支持过渡属性，颜色也可以过渡
+                                必须是一个有效值向另外一个有效值进行过渡 ,比如可以使用margin来移动元素*/
+      transition-property: all;
+      /*transition-duration: ;  指定过度效果的执行时间
+                                时间单位 s/ms 可以分别指定时间用，隔开*/
+      transition-duration: 2s;
+      /*transition-delay: ; 指定过渡的延迟时间 */
+      /*transition-timing-function: ; 过渡的时序函数,指定过渡执行方式
+                        可选值：ease 慢速开始 先加速 再减速
+                               linear  匀速运动  但是时间和ease相同
+                               ease-in 慢速开始  加速运动
+                               ease-out 减速效果
+                               ease-in-out 先加速 后减速
+                               cubic-bezier(0,1.56,1,-0.91)
+                               steps(1,end)  分步执行过渡效果  end表示1s结束执行
+                               */
+      transition-timing-function: steps(1,end);
+    }
+
+    .box3{
+      background-color: #666666;
+      transition-property: all;
+      transition-duration: 2s;
+
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="box2">
+
+  </div>
+
+  <div class="box3">
+
+  </div>
+</div>
+</body>
+</html>

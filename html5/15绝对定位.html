@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>绝对定位</title>
+  <style type="text/css">
+    .box1{
+      width: 500px;
+      height: 500px;
+      background-color: yellowgreen;
+      position: relative;
+    }
+
+    .box2{
+      height: 100px;
+      width: 100px;
+      background-color: black;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: auto;
+      margin-top: auto;
+
+      /*
+      水平布局 7个属性
+       margin-left+border-left+padding-left+width+padding-right+border-right+margin-right = 包含块的宽度
+      开启绝对定位之后 9个属性
+       left+ margin-left+border-left+padding-left+width+padding-right+border-right+margin-right +right= 包含块的宽度
+      开启绝对定位之后  水平方向需要添加left和right 但是也需要满足等式
+            当发生过度约束：如果九个值没有auto 则调整right使等式成立
+                         如果有个auto，则调整auto的属性使等式满足
+            可以设置auto的值：
+                         margin width left right
+             left 和right默认为auto
+                         如果不设置其为0，则自动调整left和right
+           垂直方向也需要满足等式
+       */
+      position: absolute;
+      right: 0px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+  <div class="box2"></div>
+</div>
+
+</body>
+</html>

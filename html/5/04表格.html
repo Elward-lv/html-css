@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>表格</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<!-- 页面中创建表格
+     使用table来创建表格
+     表格中使用tr来表示行-->
+<table border="1px" width="40%" align="center">
+  <tr>
+    <td>hello</td>
+    <td>mystyle</td>
+    <td>hello</td>
+    <td>mystyle</td>
+  </tr>
+  <tr>
+    <td>which</td>
+    <td>however</td>
+    <td>hello</td>
+    <!-- 纵向合并单元格-->
+    <td rowspan="2">mystyle</td>
+  </tr>
+  <tr>
+    <td>which</td>
+    <td>however</td>
+    <td>hello</td>
+
+  </tr>
+  <tr>
+    <td>which</td>
+    <td>however</td>
+    <!-- 横向合并-->
+    <td colspan="2">hello</td>
+  </tr>
+</table>
+
+</body>
+</html>

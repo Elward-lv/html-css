@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>table</title>
+  <style type="text/css">
+    table{
+      /**
+      快元素
+       */
+      margin: 0 auto;
+      width: 500px;
+      border: 1px solid black;
+      /*
+      border和外边框有一个距离 通过border-spaceing 设置
+       */
+      border-spacing: 0px;
+      /*
+      合并边框 防止变宽的情况
+      如果设置合并  border-spacing 自动失效
+       */
+      border-collapse: collapse;
+      /*
+      区分表头和 内容 th
+       */
+
+    }
+    td,th{
+      border: 1px solid black;
+    }
+
+    /*
+    设置隔行的颜色不同  偶数行变色
+    */
+    table  tr:nth-child(odd){
+      background-color: #a1a1a1;
+    }
+    /*
+    设置点击变色
+     */
+    tr:hover{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+<table>
+  <tr>
+    <th>学号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>住址</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>lll</td>
+    <td>男</td>
+    <td>ahpu</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>孙悟空</td>
+    <td>女</td>
+    <td>花果山</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>孙悟空</td>
+    <td>女</td>
+    <td>花果山</td>
+  <tr>
+    <td>2</td>
+    <td>孙悟空</td>
+    <td>女</td>
+    <td>花果山</td>
+  <tr>
+    <td>2</td>
+    <td>孙悟空</td>
+    <td>女</td>
+    <td>花果山</td>
+</table>
+</body>
+</html>

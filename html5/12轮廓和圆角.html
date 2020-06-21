@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>罗阔</title>
+  <style type="text/css">
+    .bix1{
+      height: 100px;
+      width: 100px;
+      background-color: #bfa;
+      /*用来设置元素的阴影效果 阴影不会影响页面的布局
+        前面的两个值是因应的偏移量 右和下偏移量
+        第一个值：水平偏移量 +向右 -向左
+        第二个值：垂直偏移量 +向下 —向下
+        第三个值：阴影的模糊半径  大：模糊
+        第四个值：阴影颜色
+        */
+      box-shadow: 10px 10px 10px rgba(0,0,0,.5) ;
+      /*outline: 用来设置元素的轮廓线 用法和border一样 都是大小颜色等
+         和border不同的地方，轮廓不会影响元素本身的大小 可能时hover时设置轮廓*/
+
+    }
+
+    .bix1:hover{
+      outline: 10px solid red;
+    }
+
+    .box2{
+      height: 100px;
+      width: 100px;
+      background-color: #666666;
+      /*border-top-radius: ; 用来设置左上圆角的半径大小
+        一个参数：圆
+        两个参数椭圆：水平和垂直*/
+      /*border-radius: ; 用来设置圆角的半径大小
+        一个参数：圆
+        四个参数椭圆：各个角的圆角半径*/
+      border-top-left-radius: 50px 100px;
+      /*border-top-right-radius: ;*/
+    }
+  </style>
+</head>
+<body>
+<div class="bix1"></div>
+<!--圆角-->
+<div class="box2"></div>
+</body>
+</html>

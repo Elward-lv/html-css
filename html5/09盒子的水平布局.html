@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>水平布局</title>
+  <style type="text/css">
+    .outer{
+      width: 800px;
+      height: 200px;
+      border: 10px black solid;
+    }
+
+    .innner{
+      width: 400px;/* 默认auto */
+      height: 200px;
+      background-color: yellowgreen;
+      /*
+      元素水平方向的位置：
+         元素在其父元素的水平方向中的位置由以下几个属性确定
+            margin-left
+            border-left
+            padding-left
+            width
+            padding-right
+            border-right
+            margin-right
+            以上相加必须为父元素的宽度  不相等的话则过度约束  等式会自动调整
+            -调整的情况： 没有auto的情况： 自动调整margin-right使等式满足情况
+                       如果某个值为auto  则会自动调整auto的属性值使等式成立
+                       如果将两个值设置auto，宽度固定  那么外边距设置为相同的值
+                           经常利用这个属性来使元素水平居中  width:xx   ; margin:0 auto
+       */
+      margin-left: 100px;
+      margin-right: 200px;
+    }
+  </style>
+</head>
+<body>
+<div class="outer">
+  <div class="innner"></div>
+</div>
+</body>
+</html>

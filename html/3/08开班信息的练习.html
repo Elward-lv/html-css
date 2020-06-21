@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>开班信息</title>
+  <style type="text/css">
+      *{
+        padding: 0;
+        margin: 0;
+      }
+    .outer{
+      /*clear: both;*/
+      /*height: 473px;*/
+      width: 300px;
+      /*background-color: darkgray;*/
+
+      margin: 50px auto;
+    }
+
+    body{
+       font: 12px/1 宋体;
+
+    }
+
+    .title{
+      border-top: 2px #019e8b solid;
+      /*float: left;*/
+      background-color: #f5f5f5;
+      height: 36px;
+      /*
+      设置字体垂直居中 只需要设置title的行高
+      如果让单行文本在元素中垂直居中，可以将元素的高度和行高值设置为相同即可
+       */
+      line-height: 36px;
+      /*
+      设置title的内边距  由于没有指定title的宽度 所以不影响其可见框的大小
+       */
+      padding: 0px 22px 0px 16px;
+    }
+
+    .title a{
+      float: right;
+      color: red;
+    }
+
+    /*
+    设置h3的字体
+     */
+    .title h3{
+      font: 16px/36px "微软雅黑";
+
+    }
+
+    .content{
+      border: 1px black solid;
+      padding: 0px 28px 0px 22px;
+    }
+
+    .content a{
+      color: black;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    /*
+    为content a添加一个移入颜色
+    */
+      .content a:hover{
+        color: red;
+      }
+
+    /*
+    标题的上边距
+    */
+    .content h3{
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+
+      .content .red{
+        color: red;
+        font-weight: bold;
+    }
+      /*
+      设置右侧的a的样式
+      */
+      .content .right{
+        float: right;
+      }
+    /*
+    设置ul的样式
+     */
+    .content ul{
+       list-style: none;
+       border-bottom: 1px dashed #deddd9;
+    }
+    /*
+    取消最后一个ul边框
+     */
+    .content .no-boder{
+      border: none;
+    }
+
+    .content li{
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+<div class="outer">
+    <div class="title">
+      <a href="#">16年面试开般计划</a>
+      <h3>近期开班</h3>
+    </div>
+  <div class="content">
+    <h3><a href="#">JAVA EE_云计算-全程就业班</a></h3>
+    <ul>
+      <li>
+        <a href="#" class="right"><span class="red">预约报名</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span class="red">无座 名额 饱满</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span class="red">开班盛况</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span >开班盛况</span></a>
+        <a href="#">开版时间：<span >2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span>开班盛况</span></a>
+        <a href="#">开版时间：<span>2016-04-27</span></a>
+      </li>
+    </ul>
+
+    <h3><a href="#">Android +人工智能 全程就业办</a></h3>
+    <ul>
+      <li>
+        <a href="#" class="right"><span class="red">预约报名</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span class="red">开班盛况</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span >开班盛况</span></a>
+        <a href="#">开版时间：<span >2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span>开班盛况</span></a>
+        <a href="#">开版时间：<span>2016-04-27</span></a>
+      </li>
+    </ul>
+
+    <h3><a href="#">前端+H5全程就业班</a></h3>
+    <ul class="no-boder">
+      <li>
+        <a href="#" class="right"><span class="red">预约报名</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+      <li>
+        <a href="#" class="right"><span class="red">开班盛况</span></a>
+        <a href="#">开版时间：<span class="red">2016-04-27</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

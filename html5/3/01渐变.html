@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>渐变</title>
+  <style type="text/css">
+    .box1{
+      width: 200px;
+      height: 200px;
+      /*background-color: yellowgreen;*/
+    /*  渐变可以设置复杂的背景颜色 可以从一个颜色到其他颜色的过度
+
+        需要通过background-image
+        线性渐变：颜色沿着一条直线发生变化
+             linear-gradient(red,yellowgreen)从上往下变化
+                  可以指定一个渐变的方向 to left , to top ,或者xxxdeg度数等
+                  可以同时指定多个颜色，多个情况平均分布
+
+              repeating-linear-gradient() 平铺的渐变
+         */
+      /*background-image: linear-gradient(to right ,red,yellowgreen,blueviolet);*/
+      /* */
+      background-image: repeating-linear-gradient(red 50px,yellow 100px);
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+
+</div>
+</body>
+</html>

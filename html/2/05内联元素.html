@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>内联元素的注意事项</title>
+  <style type="text/css">
+    /*
+    内联元素不能设置宽高
+    可以设置水平和垂直内边距  但是垂直页边距不会影响页面的布局,水平内边距会影响布局
+    边框和内边距相同
+    支持水平方向的外边距,但是不会重叠，而是重合
+    不支持垂直外边距
+     */
+      .s1{
+        background-color: green;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        /*border: red 100px solid;*/
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+      }
+    .box1{
+      width: 50px;
+      height: 50px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+<span class="s1">我是一个span</span>
+<span>我是一个span</span>
+
+<span>我是一个span</span>
+
+<div class="box1"></div>
+</body>
+</html>

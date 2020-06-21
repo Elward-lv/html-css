@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>层级</title>
+  <style type="text/css">
+    /*
+    层级问题：
+          如果定位元素的层级相同  则下边的元素会盖住上边的元素  指结构
+          通过z-index 来设置元素的层级  可以设置一个正整数  设置的比没设置的层级高  对于没有开启定位的没有作用
+          父元素的层级再高也不会盖住子元素
+     */
+    .box1{
+      height: 200px;
+      width: 200px;
+      background-color: #a1a1a1;
+    }
+    .box2{
+      height: 200px;
+      width: 200px;
+      background-color: brown;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      z-index: 15;
+    }
+    .box3{
+      height: 200px;
+      width: 200px;
+      background-color: blueviolet;
+      position: absolute;
+      left: 200px;
+      top: 200px;
+      z-index: 30;
+
+      /*
+       设置透明：
+           opcity：可以用来色湖之透明度
+           他需要一个0-1之间的值
+           1:不透明
+           0：透明
+           0.5：半透明
+
+           注意：ie8以下不支持
+           filter:alpha(opacity = 0.5)
+       */
+
+      opacity: 0.5;
+    }
+    .box4{
+      height: 100px;
+      width: 100px;
+      background-color: blue;
+
+    }
+    .box5{
+      height: 200px;
+      width: 200px;
+      background-color: red;
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+<div class="box5">
+  <div class="box4"></div>
+</div>
+</body>
+</html>

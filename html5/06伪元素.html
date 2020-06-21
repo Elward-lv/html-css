@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>为元素</title>
+  <style type="text/css">
+    p::first-letter{
+      font-size: 50px;
+    }
+    p::first-line{
+      background-color: red;
+    }
+
+    p::selection{
+      background-color: yellowgreen;
+    }
+    p{
+      width: 50px;
+    }
+
+    div::before{
+      content: "abc";
+      color: #019e8b;
+    }
+  </style>
+</head>
+<body>
+<!--表示特殊的位置  ::
+    before 元素的开始位置
+    after表示元素的结束位置  必须解和content使用，及使用css添加-->
+<p>
+  helloe  this is what i want
+</p>
+
+<div>hahahhaha</div>
+</body>
+</html>

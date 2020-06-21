@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>display</title>
+  <style type="text/css">
+     a{
+       /*
+       内联元素不支持宽高
+       通过display来修改元素的类型
+       可选值:
+           inline:可以作为一个内联元素
+           block:可以设置为块元素
+           inline-block 行内快元素  可以设置宽高不独占一行
+           none 直接消失不见 原本的位置也不存在
+
+           visiblility:hidden 直接消失不见  但是位置保留
+        */
+       display: block;
+       background-color: green;
+       height: 100px;
+       width: 100px;
+     }
+  </style>
+</head>
+<body>
+<a href="#">我是一个连接</a>
+</body>
+</html>

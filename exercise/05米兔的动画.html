@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>动画</title>
+  <style type="text/css">
+     .box1{
+       width: 132px;
+       height: 271px;
+       background-image: url("../pic/05/bigtap-mitu-queue-big.png");
+       margin: 0 auto;
+       background-position: 0 0 ;
+
+       animation: rab 2s steps(3) infinite;
+
+       /*transition-property: background-position;*/
+       /*transition-duration: 2s;*/
+       /*transition-timing-function: steps(3,start);*/
+     }
+
+    /*.box1:hover{*/
+    /*  background-position: -396px 0;*/
+    /*}*/
+
+    @keyframes rab {
+      to{
+        background-position: 0 0;
+      }
+      from{
+        background-position: -396px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="box1">
+
+</div>
+</body>
+</html>

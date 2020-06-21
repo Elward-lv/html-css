@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>长表格</title>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+ <table>
+   <!--有些情况下表格是非常长的 这个时候 我们希望把表格分为三部分：表头 主题 和 底部 -->
+   <!--thead  tbody  tfoot tr写在当中
+       如果页面中没有写tbody元素  那么游览器会自动添加tbody
+       并且将tr放到tbody里面  所有通过table > tr（子元素）选不中tr,tr是tbody的子元素-->
+   <thead>
+     <tr>
+       <th>wo</th>
+       <th>ni</th>
+       <th>ta</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>lvyanwei</td>
+       <td>pengyouquan</td>
+       <td>diannao</td>
+     </tr>
+   </tbody>
+   <tfoot>
+     <tr>
+       <td></td>
+       <td></td>
+        <td>foot</td>
+     </tr>
+   </tfoot>
+ </table>
+</body>
+</html>
